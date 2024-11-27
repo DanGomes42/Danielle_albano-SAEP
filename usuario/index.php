@@ -1,6 +1,6 @@
 <?php
 require_once "../banco.php";
-$clientes = query(listar('usuario'));
+$usuarios = query(listar('usuario'));
 ?>
 
 <!DOCTYPE html>
