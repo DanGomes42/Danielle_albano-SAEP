@@ -1,5 +1,5 @@
 <?php
-require_once "../banco.php";
+require_once "/banco.php";
 
 $atualizado = false;
 $atualizar = $_SERVER['REQUEST_METHOD'] === "POST";
@@ -20,8 +20,8 @@ if ($atualizar) {
     }
 }
 
-$cliente = query(listar('usuario', ["id_usuario", $id]));
-$cliente = $cliente[0];
+$usuario = query(listar('usuario', ["id_usuario", $id]));
+$usuario = $usuario[0];
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ $cliente = $cliente[0];
     <title>Criar Usuário</title>
 </head>
 <body>
-    <a href="/Saep_dani/usuario">Voltar</a>
+    <a href="/Danielle_albano-SAEP/usuario">Voltar</a>
 
     <form method="POST">
         <label for="nome">Nome:</label>

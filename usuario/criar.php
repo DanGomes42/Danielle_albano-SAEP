@@ -26,7 +26,7 @@ if ($criar) {
     <title>Criar Usuário</title>
 </head>
 <body>
-    <a href="/Saep_dani/usuario">Voltar</a>
+    <a href="/Danielle_albano-SAEP/usuario">Voltar</a>
 
     <form method="POST">
     <label for="nome">Nome:</label>
@@ -34,12 +34,6 @@ if ($criar) {
 
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-
-        <label for="CPF">CPF:</label>
-        <input type="CPF" id="CPF" name="CPF" required>
-
-        <label for="telefone">Telefone:</label>
-        <input type="telefone" id="telefone" name="telefone" required>
 
         <button type="submit">Cadastrar</button>
     </form>

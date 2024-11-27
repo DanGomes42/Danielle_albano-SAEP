@@ -60,3 +60,13 @@ function deletar(string $tabela, array $id) {
     $id_valor = $id[1];
     return ("DELETE FROM $tabela WHERE $id_nome = $id_valor");
 }
+
+function listar(string $tabela, $id = null) {
+    if ($id != null) {
+        $id_nome = $id[0];
+        $id_valor = $id[1];  
+        return "SELECT * FROM $tabela WHERE $id_nome = $id_valor";
+    }
+
+    return "SELECT * FROM $tabela";
+}

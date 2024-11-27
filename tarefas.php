@@ -11,14 +11,14 @@ if ($conn->connect_error) {
 }
 $usuario_id = $_GET['usuario_id'];
 
-$descricao = $_POST['descricao'];
+$descricao_tarefa = $_POST['descricao_tarefa'];
 $prioridade = $_POST['prioridade'];
 $status = $_POST['status'];
 $data_cadastro = $_POST['data_cadastro'];
 $nome_setor = $_POST['nome_setor'];
 
-$sql = "INSERT INTO chamado (usuario_id, descricao, prioridade, status, data_cadastro, nome_setor) 
-        VALUES ('$usuario_id', '$descricao', '$prioridade', 'a fazer', '$data_cadastro', '$nome_setor')";
+$sql = "INSERT INTO tarefas (usuario_id, descricao_tarefa, prioridade, status, data_cadastro, nome_setor) 
+        VALUES ('$usuario_id', '$descricao_tarefa', '$prioridade', 'a fazer', '$data_cadastro', '$nome_setor')";
 
 if ($conn->query($sql) === TRUE) {
     $response = ['mensagem' => 'Tarefa cadastrada com sucesso'];
